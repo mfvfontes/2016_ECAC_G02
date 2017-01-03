@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "df_accounts <- read.csv(\"files/account.csv\", sep = \";\")\n\nattach(df_accounts)\n\nnames <- sort(unique(district_id))\n\nlength(unique(district_id))\n\ncounts <- table(district_id)\n\ncounts\n\nhist(district_id, length(unique(district_id)), main = \"Frequency of Districts\", xlab = \"District ID\", labels = TRUE, col = \"grey\")",
+    "created" : 1483463238311.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2126683742",
+    "id" : "7DF4F490",
+    "lastKnownWriteTime" : 1479913572,
+    "last_content_update" : 1479913572,
+    "path" : "~/Desktop/2016_ECAC_G02/proj/scripts/districts.R",
+    "project_path" : "scripts/districts.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
