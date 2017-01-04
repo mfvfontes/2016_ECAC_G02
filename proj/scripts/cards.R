@@ -10,4 +10,5 @@ lbls <- c("Classic", "Gold", "Junior")
 pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls, "%", sep="") # ad % to labels 
-pie(slices, labels = lbls, col = rainbow(length(lbls)), main="Card Type")
+cols <- c("darkblue", "darkgreen", "red")
+pie(slices, labels = lbls, col = cols, main="Card Type")
