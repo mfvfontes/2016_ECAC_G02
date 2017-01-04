@@ -22,4 +22,16 @@ df_clients$gender <- gender
 counts_gender <- table(df_clients$gender)
 
 names(counts_gender) <- c("Female", "Male")
-bp_gender <- barplot(counts_gender, ylab = "Frequency", main = "Frequency of Gender")
+cols <- colorRampPalette(c("blue", "red"))(2)
+bp_gender <- barplot(counts_gender, ylab = "Frequency", main = "Frequency of Gender", col = cols)
+
+names(df_districts)[names(df_districts)=="code"] <- "district_id"
+df_clients_merged <- merge(df_clients, df_districts, by="district_id")
+
+counts_region <- table(df_clients_merged$region)
+cols <- colorRampPalette(c("blue", "red"))(8)
+
+names(counts_region) <- c("C.Bohemia", "E.Bohemia", "N.Bohemia", "N.Moravia", "Prague", "S.Bohemia", "S.Moravia", "W.Bohemia")
+bp_region <- barplot(counts_region, ylab = "Frequecy", main = "Frequency of Regions", ylim = c(0,1e3), col = cols)
+
+summary(clients_per_region$Freq)

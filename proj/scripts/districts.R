@@ -46,4 +46,6 @@ percentage_both_increasing <- (length(both_increasing$df_districts.code) / lengt
 
 print(percentage_both_increasing)
 
+plot(x = df_districts$code, y = df_districts$average.salary, ylim = c(7000, 14000), xlab = "District ID", ylab = "Average Salary", main = "Average Salary per District", col = "red")
+
 detach(df_districts)
