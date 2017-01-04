@@ -22,7 +22,7 @@ unemployment_rate_increase <- unemploymant.rate..96[-69]/unemploymant.rate..95[-
 cols <- sapply(unemployment_rate_increase, color_increase)
 
 plot(x = df_districts$unemploymant.rate..95[-69], y = df_districts$unemploymant.rate..96[-69], xlab = "Unemployment Rate (1995)", ylab = "Unemployment Rate (1996)", main = "Unemployment Rate 95-96", xlim = c(0,8), ylim = c(0,10), col = cols)
-lines(x = c(0,10), y = c(0,10), col = "blue")
+lines(x = c(0,10), y = c(0,10), col = "darkblue")
 
 # Crimes 95-96
 
@@ -34,7 +34,7 @@ crime_rate_increase <- df_districts$no..of.commited.crimes..96[-69]/df_districts
 cols <- sapply(crime_rate_increase, color_increase)
 
 plot(x = df_districts$no..of.commited.crimes..95[-69], y = df_districts$no..of.commited.crimes..96[-69], xlab = "Crimes (1995)", ylab = "Crimes (1996)", main = "Crimes between 95-96", xlim = c(0, 7000), ylim = c(0, 8000), col = cols)
-lines(x = c(0,100000), y = c(0,100000), col = "blue")
+lines(x = c(0,100000), y = c(0,100000), col = "darkblue")
 
 # Unemployment vs. Crimes
 
